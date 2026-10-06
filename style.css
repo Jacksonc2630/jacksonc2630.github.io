@@ -90,6 +90,7 @@ section { padding: 1.5rem 0 0.5rem; }
 }
 
 .hero p { max-width: 78ch; font-size: 1.05rem; line-height: 1.6; color: var(--muted); }
+.hero .about-copy { max-width: 70ch; }
 
 /* ---------- Section headings ---------- */
 h2 {
