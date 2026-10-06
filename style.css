@@ -66,13 +66,12 @@ nav .icon:hover { color: var(--accent); }
 .divider { width: 1px; height: 18px; background: var(--line); }
 
 /* ---------- Layout ---------- */
-main { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
+main { max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
 
-section { padding: 2rem 0 0.5rem; }
+section { padding: 1.5rem 0 0.5rem; }
 
 /* ---------- Hero (the one loud element) ---------- */
-/* hero is only as wide as the name; the paragraph is forced to match it */
-.hero { padding: 4.5rem 0 2rem; width: max-content; max-width: 100%; }
+.hero { padding: 3.5rem 0 1.5rem; }
 
 .hero h1 {
   font-size: clamp(2.6rem, 8vw, 4.25rem);
@@ -90,7 +89,7 @@ section { padding: 2rem 0 0.5rem; }
   background: var(--accent);
 }
 
-.hero p { width: 0; min-width: 100%; font-size: 1.05rem; line-height: 1.6; color: var(--muted); }
+.hero p { max-width: 78ch; font-size: 1.05rem; line-height: 1.6; color: var(--muted); }
 
 /* ---------- Section headings ---------- */
 h2 {
@@ -113,11 +112,11 @@ h2 {
 .entry li::marker { color: var(--accent); }
 
 /* ---------- Project cards ---------- */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 1rem; }
 
 .card {
-  display: flex; flex-direction: column; gap: 0.75rem;
-  padding: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.65rem;
+  padding: 1.25rem;
   border: 1px solid var(--line);
   border-radius: 6px;
   transition: border-color 0.15s, background-color 0.15s;
@@ -128,6 +127,18 @@ h2 {
 .card h3 a:hover { color: var(--accent); }
 .card p { color: var(--muted); font-size: 0.98rem; flex: 1; }
 
+.project-note {
+  flex: 0;
+  align-self: flex-start;
+  padding: 0.25rem 0.5rem;
+  border-left: 2px solid var(--accent);
+  background: var(--soft);
+  color: var(--text) !important;
+  font-family: var(--mono);
+  font-size: 0.72rem !important;
+  line-height: 1.5;
+}
+
 .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; }
 .tags li {
   font-family: var(--mono); font-size: 0.74rem;
@@ -137,15 +148,22 @@ h2 {
   color: var(--muted);
 }
 
-.links { display: flex; gap: 1.1rem; font-size: 0.92rem; font-weight: 500; }
+.links {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.65rem;
+  padding-top: 0.25rem;
+  font-size: 0.88rem; font-weight: 500;
+}
 .links:empty { display: none; }
 .links a {
-  display: inline-flex; align-items: center; gap: 0.35rem;
-  text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px;
-  text-decoration-color: var(--line);
-  transition: text-decoration-color 0.15s, color 0.15s;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  min-height: 2.35rem;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  transition: border-color 0.15s, color 0.15s, background-color 0.15s;
 }
-.links a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.links a:hover { color: var(--accent); border-color: var(--accent); background: var(--bg); }
+.links .i { width: 15px; height: 15px; }
 
 .card iframe { border: 0; border-radius: 4px; }
 
@@ -165,8 +183,8 @@ footer {
   .topbar { padding: 0.8rem 1.25rem; }
   nav { gap: 1rem; flex-wrap: wrap; }
   main { padding: 0 1.25rem; }
-  .hero { padding: 3rem 0 1.5rem; }
-  section { padding-top: 1.5rem; }
+  .hero { padding: 2.5rem 0 1rem; }
+  section { padding-top: 1.25rem; }
   h2 { font-size: 1.7rem; }
 }
 
