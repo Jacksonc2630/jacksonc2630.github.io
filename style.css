@@ -140,6 +140,20 @@ h2 {
   line-height: 1.5;
 }
 
+.project-note-ai {
+  border-left-color: #dc2626;
+  background: color-mix(in srgb, #dc2626 8%, var(--bg));
+  color: #b91c1c !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .project-note-ai {
+    border-left-color: #ff5a5f;
+    background: color-mix(in srgb, #ff5a5f 12%, var(--bg));
+    color: #ff8588 !important;
+  }
+}
+
 .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; }
 .tags li {
   font-family: var(--mono); font-size: 0.74rem;
