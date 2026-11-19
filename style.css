@@ -112,6 +112,13 @@ h2 {
 .entry ul + ul { margin-top: 0.25rem; } /* your bullets are each in their own <ul>; keep them tight */
 .entry li::marker { color: var(--accent); }
 
+/* ---------- Skills ---------- */
+.skills { display: grid; gap: 1rem; }
+.skill-group { padding: 0.9rem 0; border-top: 1px solid var(--line); }
+.skill-group h3 { font-size: 1.05rem; margin-bottom: 0.55rem; }
+.skill-group .tags { gap: 0.5rem; }
+.skill-group .tags li { padding: 0.25rem 0.65rem; }
+
 /* ---------- Project cards ---------- */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 1rem; }
 
